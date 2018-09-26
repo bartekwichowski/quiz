@@ -1,0 +1,48 @@
+<div class="container">
+  <form>
+    <div class="form-group">
+      <label for="question"><h3>Question</h3></label>
+      <textarea class="form-control" id="question" rows="3" [(ngModel)]="question.question" name="question"></textarea>
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">Category</label>
+      </div>
+      <select class="custom-select" id="inputGroupSelect01" [(ngModel)]="question.categoryId" name="category" [value]="'Choose ...'">
+        <option disabled hidden [value]="selectUndefinedOptionValue">-- select --</option>
+        <option *ngFor="let category of categories" [value]="category.id">{{category.name}}</option>
+      </select>
+    </div>
+    <div class="form-group" id="list1">
+      <div class="input-group mb-3" *ngFor="let answer of question.answers; let i = index" [attr.data-index]="i">
+          <div class="input-group-prepend">
+            <button class="btn btn-outline-secondary" type="button" (click)="deleteItem(i)"><span class="input-group-addon"><i class="fa fa-remove"></i></span></button>
+          </div>
+          <input name="myList" id="myList" class="form-control list-group-item" value="{{answer.answer}}" disabled>
+          <div class="input-group-append" id="button-addon4">
+            <div class="input-group-text">
+              <input type="checkbox" aria-label="Checkbox for following text input" (click)="updateAnswer(i)" [checked]="answer.correct" data-toggle="tooltip" data-placement="top" title="Choose if answer is correct." name="correct">
+            </div>
+          </div>
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <button class="btn btn-outline-secondary" type="button" (click)="addItem(new.value); new.value = ''"><span class="input-group-addon"><i class="fa fa-plus"></i></span></button>
+        </div>
+        <input type="text" class="form-control" placeholder="Add answers..." aria-label="" aria-describedby="basic-addon1" #new>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md"></div>
+      <div class="col-md-auto">
+        <input class="btn btn-success" type="submit" value="Add question" (click)="addQuestion()">
+      </div>
+      <div class="col-md-auto">
+        <input class="btn btn-success" type="submit" value="Return" (click)="goBack()">
+      </div>
+    </div>
+  </form>
+</div>
+

@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "postinstall": "cd quiz-front && npm install"
+  },
+  "engines": {
+    "node": "v8.11.3",
+    "npm": "6.2.0"
+  }
+}

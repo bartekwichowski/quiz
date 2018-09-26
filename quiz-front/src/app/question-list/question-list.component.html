@@ -1,0 +1,33 @@
+<div id="question-list" class="container">
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Question</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let question of questions">
+      <th scope="row">{{question.id}}</th>
+      <td>
+        <div class="row">
+          <div class="col-md">{{question.question}}</div>
+          <div class="col-md-auto">
+            <i class="fa fa-eye" (click)="viewQuestion(question.id)"></i>
+          </div>
+          <div class="col-md-auto">
+            <i class="fa fa-remove" (click)="deleteQuestion(question.id)"></i>
+          </div>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div class="row">
+    <div class="col-md"></div>
+    <div class="col-md-auto">
+      <a [routerLink]="['/question-edit']" class="btn btn-danger btn-circle btn-lg"><i class="fa fa-plus"></i></a>
+    </div>
+  </div>
+</div>

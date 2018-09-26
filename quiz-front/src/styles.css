@@ -1,0 +1,22 @@
+/* import bootstrap */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+@import "~mdbootstrap/css/bootstrap.css";
+/* You can add global styles to this file, and also import other style files */
+.btn-circle {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 24px;
+  line-height: 1.42;
+  border-radius: 25px;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus{
+  outline:none;
+  box-shadow:none;
+}
+.container{
+  margin-top: 80px;
+}

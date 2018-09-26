@@ -1,0 +1,22 @@
+<div id="quiz-list" class="container">
+  <div *ngIf="isQuiz">
+    <div *ngIf="questions[index]">
+      <app-question [(question)]="questions[index]"></app-question>
+    </div>
+    <div class="fixed-bottom">
+      <div class="btn-group container buttons-position">
+        <button class="btn btn-outline-secondary btn-lg no-boarder" (click)=prev()>Prev</button>
+        <button class="btn btn-outline-secondary btn-lg no-boarder" (click)=next()>Next</button>
+        <button class="btn btn-outline-secondary btn-lg no-boarder" (click)="submit()">Submit</button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!isQuiz">
+    <app-result [(questions)]="questions" [(numberOfCorrect)]="numberOfCorrect" [(numberOfAll)]="numberOfAll"></app-result>
+    <div class="fixed-bottom">
+      <div class="btn-group container buttons-position">
+        <button class="btn btn-outline-secondary btn-lg no-boarder" (click)="reset()">Reset</button>
+      </div>
+    </div>
+  </div>
+</div>

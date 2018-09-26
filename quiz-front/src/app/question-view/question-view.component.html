@@ -1,0 +1,18 @@
+<div class="container">
+  <h4>{{question?.question}}</h4>
+  <h4>{{category?.name}}</h4>
+  <ul class="collection with-header">
+    <li *ngFor="let answer of question?.answers" class="collection-item">
+      <div class="chip">{{answer.answer}}</div>
+    </li>
+  </ul>
+  <div class="row">
+    <div class="col-md"></div>
+    <div class="col-md-auto">
+      <a routerLink='/question-edit/{{question?.id}}' class="btn btn-success btn-circle btn-lg"><i class="fa fa-edit"></i></a>
+    </div>
+    <div class="col-md-auto">
+      <a (click)="goBack()" class="btn btn-success btn-circle btn-lg"><i style="color:white" class="fa fa-backward"></i></a>
+    </div>
+  </div>
+</div>

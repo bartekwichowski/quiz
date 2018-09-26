@@ -1,0 +1,9 @@
+<div class="card-body">
+  <div class="row">
+    <h5 class="card-title">{{question.question}}</h5>
+    <footer class="card-title">{{question.category}}</footer>
+  </div>
+  <div class="list-group" *ngFor="let a of question.answers">
+    <app-answer [answer]="a" (choosen)="setAnswer($event)"></app-answer>
+  </div>
+</div>
