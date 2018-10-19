@@ -1,4 +1,4 @@
-package quiz.quizback.repository;
+package quiz.repository;
 /**
  * Created by Bartlomiej Wichowski Date: 8/18/2018 Time: 10:05 AM
  */
@@ -6,8 +6,8 @@ package quiz.quizback.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
-import quiz.quizback.domain.Category;
-import quiz.quizback.dto.CategoryDTO;
+import quiz.domain.Category;
+import quiz.dto.CategoryDTO;
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ import java.util.List;
 @Repository
 public interface CategoryRepository extends JpaRepository<Category, Long> {
 
-    @Query("SELECT DISTINCT new quiz.quizback.dto.CategoryDTO(c.id, c.name) " +
+    @Query("SELECT DISTINCT new quiz.dto.CategoryDTO(c.id, c.name) " +
             "FROM Category c")
     List<CategoryDTO> getAllCategories();
 }

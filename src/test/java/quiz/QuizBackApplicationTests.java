@@ -1,4 +1,4 @@
-package quiz.quizback;
+package quiz;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

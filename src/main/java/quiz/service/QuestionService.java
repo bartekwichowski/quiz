@@ -1,8 +1,11 @@
-package quiz.quizback.service;
+package quiz.service;
 /**
  * Created by Bartlomiej Wichowski Date: 7/30/2018 Time: 5:56 PM
  */
-import quiz.quizback.dto.*;
+import quiz.dto.AnswerDTO;
+import quiz.dto.CategoryDTO;
+import quiz.dto.QuestionDTO;
+import quiz.dto.ResultDTO;
 
 import java.util.List;
 

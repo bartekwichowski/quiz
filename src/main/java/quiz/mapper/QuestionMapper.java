@@ -1,11 +1,11 @@
-package quiz.quizback.mapper;
+package quiz.mapper;
 /**
  * Created by Bartlomiej Wichowski Date: 7/30/2018 Time: 6:03 PM
  */
 
 import org.springframework.stereotype.Component;
-import quiz.quizback.domain.Question;
-import quiz.quizback.dto.QuestionDTO;
+import quiz.domain.Question;
+import quiz.dto.QuestionDTO;
 
 /**
  *

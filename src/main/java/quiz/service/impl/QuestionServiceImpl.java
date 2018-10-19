@@ -1,21 +1,25 @@
-package quiz.quizback.service.impl;
+package quiz.service.impl;
 /**
  * Created by Bartlomiej Wichowski Date: 7/30/2018 Time: 5:57 PM
  */
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import quiz.quizback.domain.Answer;
-import quiz.quizback.domain.Category;
-import quiz.quizback.domain.Question;
-import quiz.quizback.dto.*;
-import quiz.quizback.mapper.AnswerMapper;
-import quiz.quizback.mapper.CategoryMapper;
-import quiz.quizback.mapper.QuestionMapper;
-import quiz.quizback.repository.AnswerRepository;
-import quiz.quizback.repository.CategoryRepository;
-import quiz.quizback.repository.QuestionRepository;
-import quiz.quizback.service.QuestionService;
+import quiz.domain.Answer;
+import quiz.domain.Category;
+import quiz.domain.Question;
+import quiz.dto.AnswerDTO;
+import quiz.dto.CategoryDTO;
+import quiz.dto.QuestionDTO;
+import quiz.dto.ResultDTO;
+import quiz.dto.*;
+import quiz.mapper.AnswerMapper;
+import quiz.mapper.CategoryMapper;
+import quiz.mapper.QuestionMapper;
+import quiz.repository.AnswerRepository;
+import quiz.repository.CategoryRepository;
+import quiz.repository.QuestionRepository;
+import quiz.service.QuestionService;
 
 import java.util.*;
 import java.util.stream.Collectors;

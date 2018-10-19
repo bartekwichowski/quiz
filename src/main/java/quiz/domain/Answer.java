@@ -1,4 +1,4 @@
-package quiz.quizback.domain;
+package quiz.domain;
 /**
  * Created by Bartlomiej Wichowski Date: 7/28/2018 Time: 1:45 AM
  */

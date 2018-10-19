@@ -47,6 +47,7 @@ ui-src/
 
 */target/**
 /src/main/resources/static/
+/src/main/java/quiz/secret/
 
 /quiz-front/node_modules/
 /quiz-front/e2e/

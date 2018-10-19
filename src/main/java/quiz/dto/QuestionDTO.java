@@ -1,4 +1,4 @@
-package quiz.quizback.dto;
+package quiz.dto;
 /**
  * Created by Bartlomiej Wichowski Date: 7/30/2018 Time: 5:59 PM
  */

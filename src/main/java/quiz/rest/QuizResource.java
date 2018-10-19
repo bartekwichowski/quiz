@@ -1,4 +1,4 @@
-package quiz.quizback.rest;
+package quiz.rest;
 /**
  * Created by Bartlomiej Wichowski Date: 7/29/2018 Time: 3:56 AM
  */
@@ -7,11 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import quiz.quizback.dto.AnswerDTO;
-import quiz.quizback.dto.CategoryDTO;
-import quiz.quizback.dto.QuestionDTO;
-import quiz.quizback.dto.QuestionOptionsDTO;
-import quiz.quizback.service.QuestionService;
+import quiz.dto.AnswerDTO;
+import quiz.dto.CategoryDTO;
+import quiz.dto.QuestionDTO;
+import quiz.service.QuestionService;
 
 import java.util.List;
 

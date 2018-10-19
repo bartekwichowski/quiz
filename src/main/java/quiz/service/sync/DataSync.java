@@ -1,4 +1,4 @@
-package quiz.quizback.service;
+package quiz.service.sync;
 /**
  * Created by Bartlomiej Wichowski Date: 8/27/2018 Time: 8:20 AM
  */
@@ -11,7 +11,7 @@ import java.io.IOException;
 /**
  *
  */
-public class FetchingDataSync  {
+public class DataSync {
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
@@ -21,6 +21,8 @@ public class FetchingDataSync  {
                 .header("Content-Language", "en-US") //
                 .method(Connection.Method.GET)
                 .execute();
+
+
 
         Document doc = response.parse();
         System.out.println(doc.body());

@@ -1,4 +1,4 @@
-package quiz.quizback.config;
+package quiz.config;
 
 import java.io.IOException;
 
